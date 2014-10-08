@@ -11,11 +11,14 @@ var final_rendered_user_html = renderedUser(userInfo);
 
 //Right side main info
 
+
 var temp = $('#repo_template').html();
 
 var rendered =_.template(temp);
 
 var final_rendered_html;
+
+repository.reverse();
 
 _.each(repository, function(item){
 

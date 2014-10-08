@@ -11,20 +11,53 @@ body {
 
 header {
   width: 1200px;
-  height: 50px;
+  height: 70px;
 }
 
+header ul {
+  display: inline-block;
+  float: right;
+  list-style:none;
+}
+//Sidebar Styling
 .sidebar {
   float: left;
   width: 300px;
   height: 664px;
+  margin-left: 65px;
 }
 
+// Right-side styling
 .rightPane {
   float: right;
-  width: 1000px;
+  width: 960px;
   height: 1115px;
 }
+
+.box {
+  width: 740px;
+  height: 137px;
+  list-style: none;
+
+  .leftBox {
+    width: 400px;
+    height: auto;
+    border: 1px solid black;
+
+    p {
+      width: 200px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      font-size: 25px;
+      font-weight: bold;
+      color: blue;
+    }
+  }
+}
+
+
+
+
 
 
 
