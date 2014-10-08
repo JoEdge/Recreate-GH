@@ -28,6 +28,7 @@
 
     <section>
       <div class = "sidebar">Sidebar
+          <ul></ul>
       </div>
 
       <div class = "rightPane">Right Pane
@@ -42,6 +43,18 @@
           </div>
         </div>
       </div>
+
+      <script id ="user_template" type="text/template">
+     <li><%= avatar_url %></li>
+     <li><%= name %></li>
+     <li><%= login %></li>
+     <li><%= created_at %></li>
+     <li><%= followers %></li>
+     <li><%= starred_url %></li>
+     <li><%= following %><li>
+     <li><%= organizations_url %></li>
+     </script>
+
 
      <script id ="repo_template" type="text/template">
     <h3><%= name %></h3>
@@ -62,8 +75,8 @@
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
+        <script src="scripts/git-user-api.js"></script>
         <script src="scripts/git-repo-api.js"></script>
-        <script src="scripts/git-org-api.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
