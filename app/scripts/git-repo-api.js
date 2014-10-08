@@ -1,4 +1,4 @@
-[
+var repository = [
   {
     "id": 24352762,
     "name": "About",
@@ -869,4 +869,4 @@
     "watchers": 0,
     "default_branch": "master"
   }
-]
+  ];
