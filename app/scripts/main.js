@@ -46,16 +46,12 @@ var renderedUser =_.template(tempUser);
 
 // var final_rendered_user_html = renderedUser(user_url);
 
-  $.getJSON(user_url).done( function(i){
+  $.getJSON(user_url).done( function(user_data){
 
-    $('.sidebar').append(renderedUser(i));
+    $('.sidebar').append(renderedUser(user_data));
+
 
 });
-
-
-
-
-
 
 
 
@@ -66,8 +62,12 @@ var temp = $('#repo_template').html();
 
 var rendered =_.template(temp);
 
+  $.getJSON(repo_url).done( function(repo_data){
 
-  $.getJSON(repo_url).done(function(i){
+    _.each(repo_data, function(a){
 
-  $('.repo_info').append(rendered(i));
+  $('.repo_info').append(rendered(a));
+
+})
+
 });
