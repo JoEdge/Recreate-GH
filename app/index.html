@@ -62,14 +62,17 @@
      </script>
 
 
-     <script id ="repo_template" type="text/template">
+     <script id ="repo_left_template" type="text/template">
     <p><%= name %></p>
     <li><%= description %></li>
     <li>Updated <%= updated_at %></li>
-    <li><%= language %></li>
-    <li><span class="octicon octicon-star"></span> <%= stargazers_count %></li>
-    <li><span class="octicon octicon-git-branch"></span> <%= forks_count %></li>
     </script>
+
+    <script id ="repo_right_template" type="text/template">
+   <li><%= language %></li>
+   <li><span class="octicon octicon-star"></span> <%= stargazers_count %></li>
+   <li><span class="octicon octicon-git-branch"></span> <%= forks_count %></li>
+   </script>
 
     </section>
 

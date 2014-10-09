@@ -38,21 +38,29 @@ header ul {
   width: 740px;
   height: 137px;
   list-style: none;
+}
 
-  .leftBox {
+.leftBox {
+    float: left;
     width: 400px;
-    height: auto;
+    height: 137px;
     border: 1px solid black;
+}
 
-    p {
-      width: 200px;
-      margin-right: 10px;
-      margin-bottom: 10px;
-      font-size: 25px;
-      font-weight: bold;
-      color: blue;
-    }
-  }
+.leftBox p {
+    width: 200px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: blue;
+}
+
+.rightBox ul {
+    float: right;
+    width: 300px;
+    height: 137px;
+    border: 1px solid black;
 }
 
 
