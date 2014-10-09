@@ -28,47 +28,87 @@
     <header>
 
     </header>
+      <section>
+        <div class = "sidebar">
 
-    <section>
-      <div class = "sidebar">
-      </div>
-
-      <div class = "rightPane">
-        <div class = "box">
         </div>
-      </div>
 
-      <script id ="user_template" type="text/template">
-     <p><%= avatar_url %></p>
-     <h1><%= name %></h1>
-     <h2><%= login %></h2>
-     <p> <span class="octicon octicon-clock"></span> Joined on <%= created_at %></p>
-     <li><%= followers %> Followers</li>
-     <li><%= starred_url %></li>
-     <li><%= following %> Following<li>
-     <p>organizations_url</p>
-     </script>
+        <div class = "rightPane">
+          <div class = "topRight">
+            <div class = "tr_left">
+              <ul>
+                <li>Contributions</li>
+                <li>Repositories</li>
+                <li>Public Activity</li>
+              </ul>
+            </div>
+
+            <div class = "tr_right">
+               <button type="button">Edit Profile</button>
+            </div>
+          </div>
+
+          <div class = "middleRight">
+            <div class ="mr_left">
+              <input type="text" Value="Find a repository...">
+              <button type="button">Search</button>
+            </div>
+
+            <div class = "mr_right">
+              <ul>
+                <li>Mirrors</li>
+                <li>Forks</li>
+                <li>Sources</li>
+                <li>Private</li>
+                <li>Public</li>
+                <li>All</li>
+                <li><button type="button">New</button></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class = "repo_info">
 
 
-     <script id ="repo_template" type="text/template">
-     <div class ="leftBox">
-      <p><%= name %></p>
-      <ul>
-      <li><%= description %></li>
-      <li>Updated <%= updated_at %></li>
-      </ul>
-     </div>
+          </div>
+        </div>
 
-     <div class = "rightBox">
-     <ul>
-     <li><span class="octicon octicon-git-branch"></span> <%= forks_count %></li>
-    <li><span class="octicon octicon-star"></span> <%= stargazers_count %></li>
-    <li><%= language %></li>
-    </ul>
-    </div>
-   </script>
 
     </section>
+
+
+        <script id ="user_template" type="text/template">
+         <img src=" <%= avatar_url%> " style="width: 150px"/>
+         <h1><%= name %></h1>
+         <h2><%= login %></h2>
+         <p> <span class="octicon octicon-clock"></span> Joined on <%= created_at %></p>
+         <ul>
+           <li><%= followers %> Followers</li>
+           <li><%= starred_url %></li>
+           <li><%= following %> Following<li>
+         </ul>
+         <p>organizations_url</p>
+         </script>
+
+
+         <script id ="repo_template" type="text/template">
+         <div class = "box">
+            <div class ="leftBox">
+              <h3><%= name %></h3>
+                <ul>
+                  <li><%= full_name %></li>
+                  <li>Updated <%= updated_at %></li>
+                </ul>
+            </div>
+            <div class = "rightBox">
+              <ul>
+              <li><span class="octicon octicon-git-branch"></span> <%= forks_count %></li>
+              <li><span class="octicon octicon-star"></span> <%= stargazers_count %></li>
+              <li><%= language %></li>
+              </ul>
+            </div>
+          </div>
+       </script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -76,12 +116,8 @@
     <script src="../bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
+        <script src="scripts/token.js"></script>
         <!-- build:js scripts/main.js -->
-        <script src="scripts/git-user-api.js"></script>
-        <script src="scripts/git-repo-api.js"></script>
-        <script src="scripts/git-starred.js"></script>
-        <script src="scripts/git-org-api.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
