@@ -4,9 +4,7 @@
 
 // Custom Styles
 body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  font-family: "Open Sans", sans-serif;
 }
 
 header {
@@ -36,19 +34,20 @@ header ul {
 
 .box {
   width: 740px;
-  height: 137px;
-  list-style: none;
+  height: 140px;
+  border-bottom: 1px solid gray;
 }
 
 .leftBox {
     float: left;
     width: 400px;
-    height: 137px;
-    border: 1px solid black;
+    height: 140px;
+    list-style: none;
 }
 
 .leftBox p {
     width: 200px;
+    margin-top:30px;
     margin-right: 10px;
     margin-bottom: 10px;
     font-size: 25px;
@@ -56,11 +55,26 @@ header ul {
     color: blue;
 }
 
+.leftbox li{
+  padding-bottom: 10px;
+}
+
 .rightBox {
     float: right;
     width: 300px;
-    height: 137px;
-    border: 1px solid black;
+    height: 140px;
+    list-style: none;
+}
+
+.rightBox ul{
+  margin-top: 0px;
+  line-height: 30px;
+}
+
+.rightBox ul li{
+  display: inline-block;
+  float: right;
+  margin-right:10px;
 }
 
 
