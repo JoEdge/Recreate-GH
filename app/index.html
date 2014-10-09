@@ -40,14 +40,6 @@
 
       <div class = "rightPane">
         <div class = "box">
-          <div class ="leftBox">
-            <p></p>
-            <ul></ul>
-          </div>
-
-          <div class = "rightBox">
-            <ul></ul>
-          </div>
         </div>
       </div>
 
@@ -62,16 +54,18 @@
      </script>
 
 
-     <script id ="repo_left_template" type="text/template">
-    <p><%= name %></p>
-    <li><%= description %></li>
-    <li>Updated <%= updated_at %></li>
-    </script>
+     <script id ="repo_template" type="text/template">     
+     <div class ="leftBox">
+      <p><%= name %></p>
+      <li><%= description %></li>
+      <li>Updated <%= updated_at %></li>
+     </div>
 
-    <script id ="repo_right_template" type="text/template">
-   <li><%= language %></li>
-   <li><span class="octicon octicon-star"></span> <%= stargazers_count %></li>
-   <li><span class="octicon octicon-git-branch"></span> <%= forks_count %></li>
+     <div class = "rightBox">
+    <li><%= language %></li>
+    <li><span class="octicon octicon-star"></span> <%= stargazers_count %></li>
+    <li><span class="octicon octicon-git-branch"></span> <%= forks_count %></li>
+    </div>
    </script>
 
     </section>
