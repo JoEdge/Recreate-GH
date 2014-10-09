@@ -1,0 +1,68 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>repository</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/vendor/modernizr.js"></script>
+  </head>
+  <body>
+
+    <header>
+
+    </header>
+
+    <section>
+      <div class = "sidebar">
+      </div>
+
+      <div class = "rightPane">
+        <div class = "box">
+        </div>
+      </div>
+
+      <script id ="user_template" type="text/template">
+     <p><%= avatar_url %></p>
+     <h1><%= name %></h1>
+     <h2><%= login %></h2>
+     <p> <span class="octicon octicon-clock"></span> Joined on <%= created_at %></p>
+     <li><%= followers %> Followers</li>
+     <li><%= starred_url %></li>
+     <li><%= following %> Following<li>
+     <p>organizations_url</p>
+     </script>
+
+
+     <script id ="repo_template" type="text/template">
+     <div class ="leftBox">
+      <p><%= name %></p>
+      <ul>
+      <li><%= description %></li>
+      <li>Updated <%= updated_at %></li>
+      </ul>
+     </div>
+
+     <div class = "rightBox">
+     <ul>
+     <li><span class="octicon octicon-git-branch"></span> <%= forks_count %></li>
+    <li><span class="octicon octicon-star"></span> <%= stargazers_count %></li>
+    <li><%= language %></li>
+    </ul>
+    </div>
+   </script>
+
+    </section>
+
+    <script src="scripts/vendor.js"></script>
+
+        <script src="scripts/main.js"></script>
+</body>
+</html>
