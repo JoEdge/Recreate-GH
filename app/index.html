@@ -24,18 +24,38 @@
     <!-- endbuild -->
   </head>
   <body>
-
+<!-- Header-->
     <header>
+      <div class="header_left">
+        <span class="mega-octicon octicon-mark-github"></span>
+        <input type="text" Value="Search GitHub">
+      </div>
 
+      <div class="header_center">
+        <ul>
+          <li>Explore</li>
+          <li>Gist</li>
+          <li>Blog</li>
+          <li>Help</li>
+        </ul>
+      </div>
+
+      <div class="header_right">
+        <div class="header_image">
+        </div>
+      </div>
     </header>
-      <section>
-        <div class = "sidebar">
 
+  <!-- Sidebar -->
+      <section>
+        <div class="sidebar">
         </div>
 
-        <div class = "rightPane">
-          <div class = "topRight">
-            <div class = "tr_left">
+  <!-- Right side of Main Section -->
+
+        <div class="rightPane">
+          <div class="topRight">
+            <div class="tr_left">
               <ul>
                 <li>Contributions</li>
                 <li>Repositories</li>
@@ -43,18 +63,18 @@
               </ul>
             </div>
 
-            <div class = "tr_right">
+            <div class="tr_right">
                <button type="button">Edit Profile</button>
             </div>
           </div>
 
-          <div class = "middleRight">
-            <div class ="mr_left">
+          <div class="middleRight">
+            <div class="mr_left">
               <input type="text" Value="Find a repository...">
               <button type="button">Search</button>
             </div>
 
-            <div class = "mr_right">
+            <div class="mr_right">
               <ul>
                 <li>Mirrors</li>
                 <li>Forks</li>
@@ -67,18 +87,22 @@
             </div>
           </div>
 
-          <div class = "repo_info">
-
-
+          <div class="repo_info">
           </div>
         </div>
 
 
     </section>
 
+<!-- Header Script -->
+        <script id ="header_template" type="text/template">
+        <img src=" <%= avatar_url%> "/>
+        <p><%= login %></p>
+        </script>
 
+<!-- Sidebar Script -->
         <script id ="user_template" type="text/template">
-         <img src=" <%= avatar_url%> " style="width: 150px"/>
+         <img src=" <%= avatar_url%>"/>
          <h1><%= name %></h1>
          <h2><%= login %></h2>
          <p> <span class="octicon octicon-clock"></span> Joined on <%= created_at %></p>
@@ -90,17 +114,17 @@
          <p>organizations_url</p>
          </script>
 
-
+<!-- Repo scrip -->
          <script id="repo_template" type="text/template">
          <div class="box">
-            <div class ="leftBox">
+            <div class="leftBox">
               <h3><%= name %></h3>
                 <ul>
                   <li><%= description %></li>
                   <li>Updated <%= updated_at %></li>
                 </ul>
             </div>
-            <div class = "rightBox">
+            <div class="rightBox">
               <ul>
               <li><span class="octicon octicon-git-branch"></span> <%= forks_count %></li>
               <li><span class="octicon octicon-star"></span> <%= stargazers_count %></li>
