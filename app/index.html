@@ -57,6 +57,14 @@
   <!-- Sidebar -->
       <section>
         <div class="sidebar">
+          <div class="sidebar_top">
+          </div>
+          <div class="sidebar_middle">
+            <ul>
+            </ul>
+          </div>
+          <div class="sidebar_bottom">
+          </div>
         </div>
 
   <!-- Right side of Main Section -->
@@ -102,27 +110,42 @@
 
     </section>
 
-<!-- Header Script -->
+<!-- Header Template -->
         <script id ="header_template" type="text/template">
         <img src=" <%= avatar_url%> "/>
         <p><%= login %></p>
         </script>
 
-<!-- Sidebar Script -->
-        <script id ="user_template" type="text/template">
+<!-- Sidebar Template -->
+<!-- Sidebar top -->
+        <script id="user_top_template" type="text/template">
          <img src=" <%= avatar_url%>"/>
          <h1><%= name %></h1>
          <h2><%= login %></h2>
-         <p> <span class="octicon octicon-clock"></span> Joined on <%= created_at %></p>
-         <ul>
-           <li><%= followers %> Followers</li>
-           <li><%= starred_url %></li>
-           <li><%= following %> Following<li>
-         </ul>
-         <p>organizations_url</p>
-         </script>
+         <p class="join"> <span class="octicon octicon-clock"></span> Joined on <%= created_at %></p>
+        </script>
 
-<!-- Repo scrip -->
+<!-- Sidebar middle -->
+        <script id="user_middle_template1" type="text/template">
+         <li><%= followers %> Followers</li>
+        </script>
+
+        <script id="user_middle_template2" type="text/template">
+          <li><%= stargazers_count %> Starred</li>
+        </script>
+
+        <script id="user_middle_template3" type="text/template">
+         <li><%= following %> Following</li>
+       </script>
+
+
+<!-- Sidebar bottom -->
+        <script id="user_bottom_template" type="text/template>"
+        <p class="org"><%= avatar_url %></p>
+        </script>
+
+
+<!-- Repo Template -->
          <script id="repo_template" type="text/template">
          <div class="box">
             <div class="leftBox">
