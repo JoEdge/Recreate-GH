@@ -73,7 +73,10 @@ var renderedOrg =_.template(tempOrg);
 
   $.getJSON(org_url).done( function(org_data){
 
-    $('.sidebar_bottom').append(renderedOrg(org_data));
+    _.each(org_data, function(a){
+
+    $('.sidebar_bottom').append(renderedOrg(a));
+})
 
 });
 
