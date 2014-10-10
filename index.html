@@ -38,11 +38,11 @@
 
       <div class="octicon">
         <ul>
-          <li><span class="octicon octicon-plus"></span>
-          <span class="octicon octicon-arrow-small-down"></span></li>
-          <li><span class="octicon octicon-inbox"></span></li>
-          <li><span class="octicon octicon-gear"></span></li>
-          <li><span class="octicon octicon-sign-out"></span></li>
+          <li><span class="octicon octicon-plus" style="font-size:20px" ></span>
+          <span class="octicon octicon-arrow-small-down" style="font-size:20px"></span></li>
+          <li><span class="octicon octicon-inbox" style="font-size:20px"></span></li>
+          <li><span class="octicon octicon-gear" style="font-size:20px"></span></li>
+          <li><span class="octicon octicon-sign-out" style="font-size:20px"></span></li>
         </ul>
       </div>
     </header>
@@ -98,9 +98,11 @@
           <div class="repo_info">
           </div>
         </div>
-
-
     </section>
+
+    <footer>
+
+    </footer>
 
 <!-- Header Template -->
         <script id ="header_template" type="text/template">
@@ -119,15 +121,15 @@
 
 <!-- Sidebar middle -->
         <script id="user_middle_template1" type="text/template">
-         <li><%= followers %> Followers</li>
+         <li class="followers"><%= followers %> Followers</li>
         </script>
 
         <script id="user_middle_template2" type="text/template">
-          <li><%= stargazers_count %> Starred</li>
+          <li class="stars"><%= stargazers_count %> Starred</li>
         </script>
 
         <script id="user_middle_template3" type="text/template">
-         <li><%= following %> Following</li>
+         <li class="following"><%= following %> Following</li>
        </script>
 
 
