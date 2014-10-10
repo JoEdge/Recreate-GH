@@ -8,7 +8,7 @@ var org_url = 'https://api.github.com/users/joedge/orgs';
 
 var repo_url = 'https://api.github.com/users/joedge/repos';
 
-//Header info
+//info from user url
 var tempHeader = $('#header_template').html();
 var render =_.template(tempHeader);
 
@@ -34,8 +34,7 @@ var renderedMiddle3 =_.template(tempMiddle3);
 });
 
 
-
-//Sidebar middle
+//Sidebar middle - star info
 var tempMiddle2 = $('#user_middle_template2').html();
 
 var renderedMiddle2 =_.template(tempMiddle2);
@@ -49,8 +48,7 @@ var renderedMiddle2 =_.template(tempMiddle2);
 
 });
 
-
-//Sidebar bottom info
+//Sidebar bottom - org info
 var tempOrg = $('#user_bottom_template').html();
 
 var renderedOrg =_.template(tempOrg);
@@ -65,9 +63,7 @@ var renderedOrg =_.template(tempOrg);
 });
 
 //Right side main info
-
 var temp = $('#repo_template').html();
-
 var rendered =_.template(temp);
 
   $.getJSON(repo_url).done( function(repo_data){

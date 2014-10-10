@@ -117,10 +117,19 @@ header {
   list-style: none;
 }
 
+.followers {
+  float: left;
+}
 
+.stars {
+
+}
+
+.following {
+  float: right;
+}
 
 // top right-side styling
-
 .topRight {
   width: 750px;
   height: 50px;
