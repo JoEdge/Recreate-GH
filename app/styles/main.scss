@@ -29,10 +29,13 @@ header {
 .header_left input {
   width: 360px;
   height: 30px;
+  margin-top: 8px;
+  vertical-align: middle;
 }
 
 .mega-octicon {
   margin-right: 12px;
+  vertical-align: middle;
 }
 
 .header_center {
@@ -59,6 +62,7 @@ header {
   width: 30px;
   border-radius: 10px;
   margin-right: 10px;
+  vertical-align: middle;
 }
 
 .header_image p{
@@ -69,7 +73,7 @@ header {
 
 .octicon ul li{
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 18px;
   line-style: none;
 }
 
@@ -78,8 +82,8 @@ header {
   float: left;
   width: 255px;
   height: 664px;
-  margin-top:10px;
-  margin-left: 180px;
+  margin-top: 25px;
+  margin-left: 215px;
   font-family: "Open Sans", sans-serif;
   list-style: none;
 }
@@ -119,22 +123,52 @@ header {
 
 .followers {
   float: left;
+  font-size: 30px;
+  font-weight: bold;
+  color: blue;
+}
+
+.followers:after{
+  content:"Followers";
+  display: block;
+  font-size: 12px;
+  color: gray;
 }
 
 .stars {
+  font-size: 30px;
+  font-weight: bold;
+  color: blue;
+}
 
+.stars:after {
+content:"Starred";
+display: block;
+font-size: 12px;
+color: gray;
 }
 
 .following {
   float: right;
+  font-size: 30px;
+  font-weight: bold;
+  color: blue;
+}
+
+.following:after{
+  content:"Following";
+  display: block;
+  font-size: 12px;
+  color: gray;
 }
 
 // top right-side styling
 .topRight {
   width: 750px;
   height: 50px;
+  margin-top: 15px;
   font-family: "Open Sans", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   border-bottom: 1px solid gray;
 }
 
@@ -171,12 +205,12 @@ header {
   width: 750px;
   height: 60px;
   border-bottom: 1px solid gray;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .mr_left{
   float: left;
-  width: 345px;
+  width: 330px;
 
 }
 .mr_left input {
@@ -192,21 +226,21 @@ header {
 
 .mr_right ul{
   float: right;
-  width: 405px;
+  width: 400px;
   padding-left: 0px;
   list-style: none;
 }
 
 .mr_right ul li{
   display: inline-block;
-  margin-right: 8px;;
+  margin-left: 6px;;
 }
 
 .mr_right button {
   width: 66px;
   height: 30px;
   padding-bottom: 1px;
-  margin-left: 60px;
+  margin-left: 20px;
   background-color: green;
   color: white;
 }

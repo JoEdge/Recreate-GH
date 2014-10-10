@@ -47,11 +47,11 @@
 
       <div class="octicon">
         <ul>
-          <li><span class="octicon octicon-plus" style="font-size:20px" ></span>
-          <span class="octicon octicon-arrow-small-down" style="font-size:20px"></span></li>
-          <li><span class="octicon octicon-inbox" style="font-size:20px"></span></li>
-          <li><span class="octicon octicon-gear" style="font-size:20px"></span></li>
-          <li><span class="octicon octicon-sign-out" style="font-size:20px"></span></li>
+          <li><span class="octicon octicon-plus" style="font-size:18px" ></span>
+          <span class="octicon octicon-arrow-small-down" style="font-size:18px"></span></li>
+          <li><span class="octicon octicon-inbox" style="font-size:18px"></span></li>
+          <li><span class="octicon octicon-gear" style="font-size:18px"></span></li>
+          <li><span class="octicon octicon-sign-out" style="font-size:18px"></span></li>
         </ul>
       </div>
     </header>
@@ -130,15 +130,15 @@
 
 <!-- Sidebar middle -->
         <script id="user_middle_template1" type="text/template">
-         <li class="followers"><%= followers %> Followers</li>
+         <li class="followers"><%= followers %></li>
         </script>
 
         <script id="user_middle_template2" type="text/template">
-          <li class="stars"><%= stargazers_count %> Starred</li>
+          <li class="stars"><%= stargazers_count %></li>
         </script>
 
         <script id="user_middle_template3" type="text/template">
-         <li class="following"><%= following %> Following</li>
+         <li class="following"><%= following %></li>
        </script>
 
 
@@ -160,7 +160,8 @@
             </div>
             <div class="rightBox">
               <ul>
-              <li><span class="octicon octicon-git-branch"></span> <%= forks_count %></li>
+              <li><span class="octicon octicon-git-branch"></li>
+              <li></span> <%= forks_count %></li>
               <li><span class="octicon octicon-star"></span> <%= stargazers_count %></li>
               <li><%= language %></li>
               </ul>
