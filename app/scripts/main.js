@@ -10,38 +10,32 @@ var repo_url = 'https://api.github.com/users/joedge/repos';
 
 //Header info
 var tempHeader = $('#header_template').html();
+var render =_.template(tempHeader);
 
-var renderedHeader =_.template(tempHeader);
-
-  $.getJSON(user_url).done( function(header_data){
-
-    $('.header_image').append(renderedHeader(header_data));
-
-});
-
-
-//Side bar top info
-var tempUser = $('#user_top_template').html();
-
-var renderedUser =_.template(tempUser);
-
-  $.getJSON(user_url).done( function(user_data){
-
-    $('.sidebar_top').append(renderedUser(user_data));
-
-});
-//Sidebar middle
+var tempTop = $('#user_top_template').html();
+var renderedTop =_.template(tempTop);
 
 var tempMiddle1 = $('#user_middle_template1').html();
-
 var renderedMiddle1 =_.template(tempMiddle1);
 
+var tempMiddle3 = $('#user_middle_template3').html();
+var renderedMiddle3 =_.template(tempMiddle3);
+
   $.getJSON(user_url).done( function(user_data){
+
+    $('.header_image').append(render(user_data));
+
+    $('.sidebar_top').append(renderedTop(user_data));
 
     $('.sidebar_middle').append(renderedMiddle1(user_data));
 
+    $('.sidebar_middle').append(renderedMiddle3(user_data));
+
 });
 
+
+
+//Sidebar middle
 var tempMiddle2 = $('#user_middle_template2').html();
 
 var renderedMiddle2 =_.template(tempMiddle2);
@@ -55,16 +49,6 @@ var renderedMiddle2 =_.template(tempMiddle2);
 
 });
 
-
-var tempMiddle3 = $('#user_middle_template3').html();
-
-var renderedMiddle3 =_.template(tempMiddle3);
-
-  $.getJSON(user_url).done( function(user_data){
-
-    $('.sidebar_middle').append(renderedMiddle3(user_data));
-
-});
 
 //Sidebar bottom info
 var tempOrg = $('#user_bottom_template').html();
