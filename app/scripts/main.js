@@ -1,10 +1,10 @@
 //API info
 
+var user_url = 'https://api.github.com/users/joedge';
+
 var star_url = 'https://api.github.com/users/joedge/starred';
 
 var org_url = 'https://api.github.com/users/joedge/orgs';
-
-var user_url = 'https://api.github.com/users/joedge';
 
 var repo_url = 'https://api.github.com/users/joedge/repos';
 
