@@ -59,6 +59,10 @@ header {
   list-style:none;
 }
 
+.header_center ul li:hover{
+  color: HSLA(210, 53%, 51%, 1);
+}
+
 .header_right{
   display:inline-block;
   width: 110px;
@@ -85,6 +89,10 @@ header {
   font-weight: bold;
 }
 
+.header_image p:hover{
+  color: HSLA(210, 53%, 51%, 1);
+}
+
 .octicon ul {
   padding-left: 30px;
 }
@@ -92,6 +100,10 @@ header {
 .octicon ul li{
   display: inline-block;
   margin-right: 14px;
+}
+
+.octicon ul li:hover{
+  color: HSLA(210, 53%, 51%, 1);
 }
 
 //Sidebar Styling
@@ -285,7 +297,16 @@ header {
 
 .mr_right ul li{
   display: inline-block;
-  margin-left: 6px;;
+  margin-left: 6px;
+  color: HSLA(210, 53%, 51%, 1);
+
+  .all {
+    color: black;
+  }
+}
+
+.mr_right ul li:hover {
+    text-decoration: underline;
 }
 
 .mr_right button {
@@ -324,6 +345,10 @@ header {
     color: HSLA(210, 53%, 51%, 1);
 }
 
+.leftBox h3:hover {
+    text-decoration: underline;
+}
+
 .leftBox ul {
     padding-left: 0px;
     margin-top: 0px;
@@ -333,7 +358,7 @@ header {
 .leftBox ul li {
     padding-top: 0px;
     padding-bottom: 10px;
-    line-height: 15px;
+    line-height: 18px;
     font-size: 14px;
     color: HSLA(0, 0%, 53%, 1);
 }
