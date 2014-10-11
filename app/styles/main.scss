@@ -21,7 +21,7 @@ header {
     display: inline-block;
     float: left;
     width: 420px;
-    margin-top: 26px;
+    margin-top: 15px;
     margin-left: 6px;
 }
 
@@ -29,6 +29,7 @@ header {
   width: 360px;
   height: 30px;
   margin-top: 8px;
+  border-radius: 3px;
   vertical-align: middle;
 }
 
@@ -43,7 +44,7 @@ header {
 .header_center {
   display: inline-block;
   width: 300px;
-  margin-top: 25px;
+  margin-top: 15px;
   font-family: 'Roboto', sans serif;
 }
 
@@ -194,7 +195,7 @@ header {
 .rightPane {
   float: right;
   width: 974px;
-  height: 1512px;
+  height: 1545px;
 }
 
 .topRight {
@@ -232,6 +233,10 @@ header {
   height: 25px;
   margin-top: 10px;
   margin-left: 133px;
+  font-weight: bold;
+  background-color: HSLA(0, 0%, 95%, 1);
+  border-radius: 3px;
+
 }
 
 //middle right styling
@@ -239,7 +244,7 @@ header {
 .middleRight{
   width: 750px;
   height: 60px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid HSLA(0, 0%, 93%, 1);
   font-size: 14px;
 }
 
@@ -252,12 +257,17 @@ header {
   width: 260px;
   height: 32px;
   margin-top: 11px;
+  border-radius: 4px;
+  color: HSLA(0, 0%, 66%, 1);
 }
 
 .mr_left button {
   width: 70px;
   height: 33px;
   padding-bottom: 1px;
+  font-weight: bold;
+  background-color: HSLA(0, 0%, 95%, 1);
+  border-radius: 3px;
 }
 
 .mr_right {
@@ -283,8 +293,10 @@ header {
   height: 32px;
   padding-bottom: 1px;
   margin-left: 8px;
+  font-size: 14px;
   background-color: hsla(104, 57%, 62%, 1);
   color: white;
+  border-radius: 3px;
 }
 
 //repo styling
@@ -330,7 +342,12 @@ header {
     float: right;
     width: 200px;
     height: 134px;
+    font-size: 13px;
     list-style: none;
+}
+
+.rightBox:after{
+  font-size: 13px;
 }
 
 .rightBox ul{
@@ -341,7 +358,6 @@ header {
   display: inline-block;
   float: right;
   margin-right:15px;
-  font-size: 13px;
   color: HSLA(0, 0%, 53%, 1);
 }
 
@@ -358,7 +374,7 @@ footer {
 
 .overall_f {
   display: inline-block;
-  width: 1032px;
+  width: 1018px;
   height: 100px;
   border-top: 1px solid HSLA(0, 0%, 93%, 1);
 }
@@ -377,6 +393,12 @@ footer {
   float: left;
   margin-right: 15px;
   list-style: none;
+  color: HSLA(210, 53%, 51%, 1);
+
+  .copy {
+    color: HSLA(0, 0%, 48%, 1);
+  }
+
 }
 
 .footer_center {
@@ -409,6 +431,7 @@ footer {
   float: right;
   margin-left: 16px;
   list-style: none;
+  color: HSLA(210, 53%, 51%, 1)
 }
 
 
