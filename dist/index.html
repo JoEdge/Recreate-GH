@@ -141,7 +141,7 @@
          <img src=" <%= avatar_url%>"/>
          <h1><%= name %></h1>
          <h2><%= login %></h2>
-         <p class="join"> <span class="octicon octicon-clock"></span> Joined on <%= created_at %></p>
+         <p class="join"> <span class="octicon octicon-clock"></span> Joined on <%= $.format.date(created_at, "MMM dd, yyyy")%></p>
         </script>
 
 <!-- Sidebar middle -->
@@ -171,7 +171,7 @@
               <h3><%= name %></h3>
                 <ul>
                   <li><%= description %></li>
-                  <li>Updated <%= updated_at %></li>
+                  <li>Updated <%= $.format.prettyDate(updated_at) %></li>
                 </ul>
             </div>
             <div class="rightBox">
