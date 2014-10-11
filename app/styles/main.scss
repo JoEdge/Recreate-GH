@@ -95,6 +95,7 @@ header {
 
 .sidebar_top h1 {
   margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .sidebar_top h2 {
@@ -306,10 +307,52 @@ footer {
   padding-right: 200px;
   overflow: auto;
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  background-color: hsla(0, 0%, 96%, 1);
+  font-size: 12px;
 }
 
+.overall_f {
+  display: inline-block;
+  width: 1032px;
+  height: 100px;
+  border-top: 1px solid gray;
+}
+
+.footer_left {
+  display: inline-block;
+  float: left;
+  width: 400px;
+  margin-top: 25px;
+}
+
+.footer_left ul li {
+  display: inline-block;
+  float: left;
+  margin-right: 15px;
+  list-style: none;
+}
+
+.footer_center {
+  display: inline-block;
+  width: 100px;
+  margin-top: 25px;
+  margin-left: 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.footer_right {
+  display: inline-block;
+  float: right;
+  width: 400px;
+  margin-top: 25px;
+}
+
+.footer_right ul li{
+  display: inline-block;
+  float: right;
+  margin-left: 15px;
+  list-style: none;
+}
 
 
 
