@@ -465,6 +465,9 @@ var DateFormat = {};
   $.format = DateFormat.format;
 }(jQuery));
 
+$( document ).ready(function() {
+
+
 //API info
 
 var user_url = 'https://api.github.com/users/joedge';
@@ -540,5 +543,7 @@ var rendered =_.template(temp);
   $('.repo_info').append(rendered(a));
 
 })
+
+});
 
 });
