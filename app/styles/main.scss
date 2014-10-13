@@ -265,12 +265,17 @@ header {
 .tr_right button {
   width: 105px;
   height: 25px;
+  border: 1px solid $athens_gray;
   margin-top: 10px;
   margin-left: 133px;
+  font-size: 13px;
   font-weight: bold;
   background-color: $anti_white;
   border-radius: 3px;
+}
 
+.tr_right button:hover{
+  background-color: $athens_gray;
 }
 
 //middle right styling
@@ -299,9 +304,15 @@ header {
   width: 70px;
   height: 33px;
   padding-bottom: 1px;
+  border: none;
+  font-size: 13px;
   font-weight: bold;
   background-color: $anti_white;
   border-radius: 3px;
+}
+
+.mr_left button:hover{
+  background-color: $athens_gray;
 }
 
 .mr_right {
@@ -335,6 +346,7 @@ header {
   width: 68px;
   height: 32px;
   padding-bottom: 1px;
+  border: none;
   margin-left: 8px;
   font-size: 14px;
   background-color: hsla(104, 57%, 62%, 1);
@@ -403,6 +415,12 @@ header {
   display: inline-block;
   float: right;
   margin-right:15px;
+  color: HSLA(0, 0%, 53%, 1);
+}
+
+.rightBox ul li span{
+  font-size: 14px;
+  font-weight: bold;
   color: HSLA(0, 0%, 53%, 1);
 }
 
