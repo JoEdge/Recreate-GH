@@ -514,7 +514,7 @@ var renderedMiddle2 =_.template(tempMiddle2);
     _.each(star_data, function(a){
 
     $('.sidebar_middle').append(renderedMiddle2(a));
-})
+});
 
 });
 
@@ -528,7 +528,7 @@ var renderedOrg =_.template(tempOrg);
     _.each(org_data, function(a){
 
     $('.sidebar_bottom').append(renderedOrg(a));
-})
+});
 
 });
 
@@ -542,7 +542,7 @@ var rendered =_.template(temp);
 
   $('.repo_info').append(rendered(a));
 
-})
+});
 
 });
 
