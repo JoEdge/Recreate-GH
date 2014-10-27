@@ -146,7 +146,7 @@
 <!-- Sidebar Template -->
 <!-- Sidebar top -->
         <script id="user_top_template" "text/x-handlebars-template">
-         <img src=" {{ avatar_url }}"/>
+         <img src="{{ avatar_url }}"/>
          <h1> {{ name }}</h1>
          <h2> {{ login }}</h2>
          <p class="join"> <span class="octicon octicon-clock"></span>    Joined on {{ $.format.date(created_at, "MMM dd, yyyy")}}</p>
@@ -168,7 +168,7 @@
 
 <!-- Sidebar bottom -->
         <script id="user_bottom_template" "text/x-handlebars-template">
-        <img src=" {{ avatar_url}}" style="width:42px"/>
+        <img src=" {{ avatar_url }}" style="width:42px"/>
         </script>
 
 
@@ -184,7 +184,7 @@
             </div>
             <div class="rightBox">
               <ul>
-              <li><span class="octicon octicon-git-branch">{{forks_count }}</li>
+              <li><span class="octicon octicon-git-branch">{{ forks_count }}</li>
               <li><span class="octicon octicon-star"></span> {{ stargazers_count }}</li>
               <li>{{ language }}</li>
               </ul>
