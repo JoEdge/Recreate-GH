@@ -1,4 +1,3 @@
-
 var DateFormat = {};
 
 (function($) {
@@ -466,7 +465,7 @@ var DateFormat = {};
   $.format = DateFormat.format;
 }(jQuery));
 
-$( document ).ready(function() {
+( document ).ready(function() {
 
 
 //API info
@@ -481,16 +480,16 @@ var repo_url = 'https://api.github.com/users/joedge/repos';
 
 //info from user url
 var tempHeader = $('#header_template').html();
-var render = Handlebars.compile(tempHeader);
+var render =_.template(tempHeader);
 
 var tempTop = $('#user_top_template').html();
-var renderedTop = Handlebars.compile(tempTop);
+var renderedTop =_.template(tempTop);
 
 var tempMiddle1 = $('#user_middle_template1').html();
-var renderedMiddle1 = Handlebars.compile(tempMiddle1);
+var renderedMiddle1 =_.template(tempMiddle1);
 
 var tempMiddle3 = $('#user_middle_template3').html();
-var renderedMiddle3 = Handlebars.compile(tempMiddle3);
+var renderedMiddle3 =_.template(tempMiddle3);
 
   $.getJSON(user_url).done( function(user_data){
 
@@ -508,7 +507,7 @@ var renderedMiddle3 = Handlebars.compile(tempMiddle3);
 //Sidebar middle - star info
 var tempMiddle2 = $('#user_middle_template2').html();
 
-var renderedMiddle2 = Handlebars.compile(tempMiddle2);
+var renderedMiddle2 =_.template(tempMiddle2);
 
   $.getJSON(star_url).done( function(star_data){
 
@@ -522,7 +521,7 @@ var renderedMiddle2 = Handlebars.compile(tempMiddle2);
 //Sidebar bottom - org info
 var tempOrg = $('#user_bottom_template').html();
 
-var renderedOrg = Handlebars.compile(tempOrg);
+var renderedOrg =_.template(tempOrg);
 
   $.getJSON(org_url).done( function(org_data){
 
@@ -535,7 +534,7 @@ var renderedOrg = Handlebars.compile(tempOrg);
 
 //Right side main info
 var temp = $('#repo_template').html();
-var rendered = Handlebars.compile(temp);
+var rendered =_.template(temp);
 
   $.getJSON(repo_url).done( function(repo_data){
 
