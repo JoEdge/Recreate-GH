@@ -60,7 +60,9 @@
         <div class="sidebar">
           <div class="sidebar_top">
           </div>
-          <div class="sidebar_middle">
+          <div>
+            <ul class="sidebar_middle">
+            </ul>
           </div>
           <div class="sidebar_bottom">
             <h3>Organizations</h3>
@@ -136,57 +138,51 @@
       </div>
     </footer>
 
-<!-- All templates below -->
-<!-- Header Template -->
-        <script id ="header_template" type="text/template">
-        <img src=" <%= avatar_url%> "/>
-        <p><%= login %></p>
-        </script>
 
 <!-- Sidebar Template -->
 <!-- Sidebar top -->
-        <script id="user_top_template" type="text/template">
-         <img src=" <%= avatar_url%>"/>
-         <h1><%= name %></h1>
-         <h2><%= login %></h2>
-         <p class="join"> <span class="octicon octicon-clock"></span>    Joined on <%= $.format.date(created_at, "MMM dd, yyyy")%></p>
+        <script id="user_top_template" type="text/x-handlebars-template">
+         <img src=" {{ avatar_url }}"/>
+         <h1>{{ name }}</h1>
+         <h2>{{ login }}</h2>
+         <p class="join"> <span class="octicon octicon-clock"></span>    Joined on {{ prettyDate created_at }}</p>
         </script>
 
 <!-- Sidebar middle -->
-        <script id="user_middle_template1" type="text/template">
-         <li class="followers"><%= followers %></li>
+        <script id="user_middle_template1" type="text/x-handlebars-template">
+         <li class="followers">{{ followers }}</li>
         </script>
 
-        <script id="user_middle_template2" type="text/template">
-          <li class="stars"><%= stargazers_count %></li>
+        <script id="user_middle_template2" type="text/x-handlebars-template">
+          <li class="stars">{{ stargazers_count }}</li>
         </script>
 
-        <script id="user_middle_template3" type="text/template">
-         <li class="following"><%= following %></li>
+        <script id="user_middle_template3" type="text/x-handlebars-template">
+         <li class="following">{{ following }}</li>
        </script>
 
 
 <!-- Sidebar bottom -->
-        <script id="user_bottom_template" type="text/template">
-        <img src=" <%= avatar_url%>" style="width:42px"/>
+        <script id="user_bottom_template" type="text/x-handlebars-template">
+        <img src=" {{ avatar_url }}" style="width:42px"/>
         </script>
 
 
 <!-- Repo Template -->
-         <script id="repo_template" type="text/template">
+         <script id="repo_template" type="text/x-handlebars-template">
          <div class="box">
             <div class="leftBox">
-              <h3><%= name %></h3>
+              <h3>{{ name }}</h3>
                 <ul>
-                  <li><%= description %></li>
-                  <li>Updated <%= $.format.prettyDate(updated_at) %></li>
+                  <li>{{ description }}</li>
+                  <li>Updated {{ prettyDate updated_at }}</li>
                 </ul>
             </div>
             <div class="rightBox">
               <ul>
-              <li><span class="octicon octicon-git-branch"><%=forks_count %></li>
-              <li><span class="octicon octicon-star"></span> <%= stargazers_count %></li>
-              <li><%= language %></li>
+              <li><span class="octicon octicon-git-branch">{{ forks_count }}</li>
+              <li><span class="octicon octicon-star"></span> {{ stargazers_count }}</li>
+              <li>{{ language }}</li>
               </ul>
             </div>
           </div>
@@ -196,11 +192,13 @@
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/handlebars/handlebars.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
         <script src="scripts/token.js"></script>
         <!-- build:js scripts/main.js -->
         <script src="scripts/jquery-dateFormat.js"></script>
+        <script src="scripts/templates.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
