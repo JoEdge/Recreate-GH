@@ -17,8 +17,7 @@ return new Date(date).toString('MMM'+'dd'+' yyyy')
 
 //info from user url
 
-var tempHeader = $('#header_template').html();
-var render = Handlebars.compile(tempHeader);
+var render = Handlebars.templates['header'];
 
 var tempTop = $('#user_top_template').html();
 var renderedTop = Handlebars.compile(tempTop);
