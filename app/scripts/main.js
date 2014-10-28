@@ -19,8 +19,7 @@ return new Date(date).toString('MMM'+'dd'+' yyyy')
 
 var render = Handlebars.templates['header'];
 
-var tempTop = $('#user_top_template').html();
-var renderedTop = Handlebars.compile(tempTop);
+var renderedTop = Handlebars.templates['user_top'];
 
 var tempMiddle1 = $('#user_middle_template1').html();
 var renderedMiddle1 = Handlebars.compile(tempMiddle1);
@@ -32,7 +31,7 @@ var renderedMiddle3 = Handlebars.compile(tempMiddle3);
 
     $('.header_image').html(render(user_data));
 
-    $('.sidebar_top').append(renderedTop(user_data));
+    $('.sidebar_top').html(renderedTop(user_data));
 
     $('.sidebar_middle').append(renderedMiddle1(user_data));
 

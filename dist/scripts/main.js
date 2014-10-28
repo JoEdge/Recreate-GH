@@ -475,7 +475,21 @@ templates['header'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function
     + escapeExpression(((helper = (helper = helpers.login || (depth0 != null ? depth0.login : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"login","hash":{},"data":data}) : helper)))
     + "</p>\n";
 },"useData":true});
+
+templates['user_top'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+  var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+  return "<img src=\" "
+    + escapeExpression(((helper = (helper = helpers.avatar_url || (depth0 != null ? depth0.avatar_url : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"avatar_url","hash":{},"data":data}) : helper)))
+    + "\"/>\n<h1>"
+    + escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"name","hash":{},"data":data}) : helper)))
+    + "</h1>\n<h2>"
+    + escapeExpression(((helper = (helper = helpers.login || (depth0 != null ? depth0.login : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"login","hash":{},"data":data}) : helper)))
+    + "</h2>\n<p class=\"join\"> <span class=\"octicon octicon-clock\"></span>    Joined on "
+    + escapeExpression(((helpers.prettyDate || (depth0 && depth0.prettyDate) || helperMissing).call(depth0, (depth0 != null ? depth0.created_at : depth0), {"name":"prettyDate","hash":{},"data":data})))
+    + "</p>\n";
+},"useData":true});
 })();
+
 $( document ).ready(function() {
 
 
@@ -497,8 +511,7 @@ return new Date(date).toString('MMM'+'dd'+' yyyy')
 
 var render = Handlebars.templates['header'];
 
-var tempTop = $('#user_top_template').html();
-var renderedTop = Handlebars.compile(tempTop);
+var renderedTop = Handlebars.templates['user_top'];
 
 var tempMiddle1 = $('#user_middle_template1').html();
 var renderedMiddle1 = Handlebars.compile(tempMiddle1);
@@ -510,7 +523,7 @@ var renderedMiddle3 = Handlebars.compile(tempMiddle3);
 
     $('.header_image').html(render(user_data));
 
-    $('.sidebar_top').append(renderedTop(user_data));
+    $('.sidebar_top').html(renderedTop(user_data));
 
     $('.sidebar_middle').append(renderedMiddle1(user_data));
 
