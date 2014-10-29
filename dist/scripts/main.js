@@ -476,6 +476,50 @@ templates['header'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function
     + "</p>\n";
 },"useData":true});
 
+templates['repo_main'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+  var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+  return "<div class=\"box\">\n   <div class=\"leftBox\">\n     <h3>"
+    + escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"name","hash":{},"data":data}) : helper)))
+    + "</h3>\n       <ul>\n         <li>"
+    + escapeExpression(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"description","hash":{},"data":data}) : helper)))
+    + "</li>\n         <li>Updated "
+    + escapeExpression(((helpers.prettyDate || (depth0 && depth0.prettyDate) || helperMissing).call(depth0, (depth0 != null ? depth0.updated_at : depth0), {"name":"prettyDate","hash":{},"data":data})))
+    + "</li>\n       </ul>\n   </div>\n   <div class=\"rightBox\">\n     <ul>\n     <li><span class=\"octicon octicon-git-branch\">"
+    + escapeExpression(((helper = (helper = helpers.forks_count || (depth0 != null ? depth0.forks_count : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"forks_count","hash":{},"data":data}) : helper)))
+    + "</li>\n     <li><span class=\"octicon octicon-star\"></span> "
+    + escapeExpression(((helper = (helper = helpers.stargazers_count || (depth0 != null ? depth0.stargazers_count : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"stargazers_count","hash":{},"data":data}) : helper)))
+    + "</li>\n     <li>"
+    + escapeExpression(((helper = (helper = helpers.language || (depth0 != null ? depth0.language : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"language","hash":{},"data":data}) : helper)))
+    + "</li>\n     </ul>\n   </div>\n </div>\n";
+},"useData":true});
+templates['sidebar_bottom'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+  var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+  return "<img src=\" "
+    + escapeExpression(((helper = (helper = helpers.avatar_url || (depth0 != null ? depth0.avatar_url : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"avatar_url","hash":{},"data":data}) : helper)))
+    + "\" style=\"width:42px\"/>\n";
+},"useData":true});
+
+templates['sidebar_middle1'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+  var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+  return "\n<li class=\"followers\">"
+    + escapeExpression(((helper = (helper = helpers.followers || (depth0 != null ? depth0.followers : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"followers","hash":{},"data":data}) : helper)))
+    + "</li>\n";
+},"useData":true});
+
+templates['sidebar_middle2'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+  var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+  return "<li class=\"stars\">"
+    + escapeExpression(((helper = (helper = helpers.stargazers_count || (depth0 != null ? depth0.stargazers_count : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"stargazers_count","hash":{},"data":data}) : helper)))
+    + "</li>\n";
+},"useData":true});
+
+templates['sidebar_middle3'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+  var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+  return "<li class=\"following\">"
+    + escapeExpression(((helper = (helper = helpers.following || (depth0 != null ? depth0.following : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"following","hash":{},"data":data}) : helper)))
+    + "</li>\n";
+},"useData":true});
+
 templates['user_top'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
   var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
   return "<img src=\" "
@@ -513,28 +557,22 @@ var render = Handlebars.templates['header'];
 
 var renderedTop = Handlebars.templates['user_top'];
 
-var tempMiddle1 = $('#user_middle_template1').html();
-var renderedMiddle1 = Handlebars.compile(tempMiddle1);
+var renderedMiddle1 = Handlebars.templates['sidebar_middle1'];
 
-var tempMiddle3 = $('#user_middle_template3').html();
-var renderedMiddle3 = Handlebars.compile(tempMiddle3);
+var renderedMiddle3 = Handlebars.templates['sidebar_middle2'];
 
   $.getJSON(user_url).done( function(user_data){
 
     $('.header_image').html(render(user_data));
 
     $('.sidebar_top').html(renderedTop(user_data));
-
     $('.sidebar_middle').append(renderedMiddle1(user_data));
-
-    $('.sidebar_middle').append(renderedMiddle3(user_data));
+  $('.sidebar_middle').append(renderedMiddle3(user_data));
 });
 
 
 //Sidebar middle - star info
-var tempMiddle2 = $('#user_middle_template2').html();
-
-var renderedMiddle2 = Handlebars.compile(tempMiddle2);
+var renderedMiddle2 = Handlebars.templates['sidebar_middle3'];
 
   $.getJSON(star_url).done( function(star_data){
 
@@ -546,9 +584,7 @@ var renderedMiddle2 = Handlebars.compile(tempMiddle2);
 });
 
 //Sidebar bottom - org info
-var tempOrg = $('#user_bottom_template').html();
-
-var renderedOrg = Handlebars.compile(tempOrg);
+var renderedOrg = Handlebars.templates['sidebar_bottom'];
 
   $.getJSON(org_url).done( function(org_data){
 
@@ -560,8 +596,7 @@ var renderedOrg = Handlebars.compile(tempOrg);
 });
 
 //Right side main info
-var temp = $('#repo_template').html();
-var rendered = Handlebars.compile(temp);
+var rendered = Handlebars.templates['repo_main'];
 
   $.getJSON(repo_url).done( function(repo_data){
 

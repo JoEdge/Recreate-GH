@@ -21,28 +21,22 @@ var render = Handlebars.templates['header'];
 
 var renderedTop = Handlebars.templates['user_top'];
 
-var tempMiddle1 = $('#user_middle_template1').html();
-var renderedMiddle1 = Handlebars.compile(tempMiddle1);
+var renderedMiddle1 = Handlebars.templates['sidebar_middle1'];
 
-var tempMiddle3 = $('#user_middle_template3').html();
-var renderedMiddle3 = Handlebars.compile(tempMiddle3);
+var renderedMiddle3 = Handlebars.templates['sidebar_middle2'];
 
   $.getJSON(user_url).done( function(user_data){
 
     $('.header_image').html(render(user_data));
 
     $('.sidebar_top').html(renderedTop(user_data));
-
     $('.sidebar_middle').append(renderedMiddle1(user_data));
-
-    $('.sidebar_middle').append(renderedMiddle3(user_data));
+  $('.sidebar_middle').append(renderedMiddle3(user_data));
 });
 
 
 //Sidebar middle - star info
-var tempMiddle2 = $('#user_middle_template2').html();
-
-var renderedMiddle2 = Handlebars.compile(tempMiddle2);
+var renderedMiddle2 = Handlebars.templates['sidebar_middle3'];
 
   $.getJSON(star_url).done( function(star_data){
 
@@ -54,9 +48,7 @@ var renderedMiddle2 = Handlebars.compile(tempMiddle2);
 });
 
 //Sidebar bottom - org info
-var tempOrg = $('#user_bottom_template').html();
-
-var renderedOrg = Handlebars.compile(tempOrg);
+var renderedOrg = Handlebars.templates['sidebar_bottom'];
 
   $.getJSON(org_url).done( function(org_data){
 
@@ -68,8 +60,7 @@ var renderedOrg = Handlebars.compile(tempOrg);
 });
 
 //Right side main info
-var temp = $('#repo_template').html();
-var rendered = Handlebars.compile(temp);
+var rendered = Handlebars.templates['repo_main'];
 
   $.getJSON(repo_url).done( function(repo_data){
 
